@@ -203,24 +203,10 @@ $mobile-max: 999px;
         }
     }
 
-    .hero-mascot__pause {
-        display: flex;
-        align-items: center;
-        gap: 6px;
-        margin: 0 auto;
-        padding: 6px 10px;
-        border: 0;
-        background: transparent;
-        color: var(--primary-700);
-        font: inherit;
-        font-size: 11px;
-        line-height: 1.4;
-        opacity: 0.7;
-        cursor: pointer;
-
-        &:hover { opacity: 1; }
-        &:focus-visible { outline: 2px solid var(--primary-400); outline-offset: 3px; }
-        &[hidden] { display: none; }
+    .hero-mascot svg:focus-visible {
+        outline: 2px solid var(--primary-400);
+        outline-offset: 4px;
+        border-radius: 12px;
     }
 
     @media (max-width: 999px) {
