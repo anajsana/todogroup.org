@@ -1,0 +1,8 @@
+<figure class="hero-mascot" data-slash-friends>
+  {{ readFile "static/img/todo-slash-friends.svg" | safeHTML }}
+  <button class="hero-mascot__pause" type="button" aria-pressed="false" data-animation-toggle>
+    <span aria-hidden="true" data-animation-icon>Ⅱ</span>
+    <span data-animation-label>Pause animation</span>
+  </button>
+</figure>
+<script src="{{ "js/todo-slash-friends.js" | relURL }}" defer></script>

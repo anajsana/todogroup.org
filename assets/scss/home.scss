@@ -149,3 +149,85 @@ $mobile-max: 999px;
         border-radius: 10px;
     }
 }
+
+// An open, calm introduction with the animated double-slash characters.
+.page-home .content .hero-grid {
+    align-items: center;
+    padding-block: 30px 64px;
+    row-gap: 24px;
+
+    h1 {
+        font-size: clamp(48px, 5.8vw, 80px);
+        line-height: 1.12;
+        margin-block-end: 32px;
+    }
+
+    .subhero {
+        font-size: 19px;
+        line-height: 1.5;
+        max-width: 535px;
+        margin-block-end: 26px;
+    }
+
+    .shortened-width {
+        font-size: 17px;
+        line-height: 1.7;
+        max-width: 535px;
+        margin-block: 0 28px;
+    }
+
+    .button {
+        margin-bottom: 0;
+    }
+
+    .hero-grid__col2 {
+        align-self: center;
+        padding-bottom: 0;
+    }
+
+    .hero-mascot {
+        width: 100%;
+        max-width: 490px;
+        margin: 0 auto;
+        position: relative;
+
+        svg {
+            display: block;
+            width: 100%;
+            height: auto;
+            overflow: visible;
+        }
+
+        &.is-paused svg * {
+            animation-play-state: paused !important;
+        }
+    }
+
+    .hero-mascot__pause {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        margin: 0 auto;
+        padding: 6px 10px;
+        border: 0;
+        background: transparent;
+        color: var(--primary-700);
+        font: inherit;
+        font-size: 11px;
+        line-height: 1.4;
+        opacity: 0.7;
+        cursor: pointer;
+
+        &:hover { opacity: 1; }
+        &:focus-visible { outline: 2px solid var(--primary-400); outline-offset: 3px; }
+        &[hidden] { display: none; }
+    }
+
+    @media (max-width: 999px) {
+        padding-block: 15px 45px;
+
+        .hero-grid__col1,
+        .hero-grid__col2 { grid-column: span 12; }
+        .hero-mascot { width: 80%; max-width: 390px; }
+    }
+}
